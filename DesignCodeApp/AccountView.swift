@@ -38,12 +38,10 @@ struct AccountView: View {
                 .padding()
                 .background(Circle().fill(.ultraThinMaterial))
                 .background(
-                    Image(systemName: "hexagon")
-                        .symbolVariant(.fill)
-                        .foregroundColor(.blue)
-                        .font(.system(size: 200))
+                   HexagonView()
                         .offset(x: -50, y: -100)
                 )
+                
             Text("Saeed Noshadi")
                 .font(.system(.title, design: .rounded).weight(.semibold))
             //                    Label("Iran", systemImage: "location")
@@ -57,6 +55,11 @@ struct AccountView: View {
         }
         .frame(maxWidth: .infinity)
         .padding()
+        .background(
+            BlobView()
+                .offset(x: 200, y: 0)
+                .scaleEffect(0.6)
+        )
     }
     
     var menu: some View{
@@ -102,7 +105,6 @@ struct AccountView: View {
                         Label("Delete", systemImage: "trash")
                     }
                     .tint(.red)
-                
                     pinButton
                 }
             }

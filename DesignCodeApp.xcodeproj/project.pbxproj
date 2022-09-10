@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9A257B542897B59800E7C3E2 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A257B532897B59800E7C3E2 /* AccountView.swift */; };
+		9A33172928CB857D0001A508 /* BlobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A33172828CB857D0001A508 /* BlobView.swift */; };
+		9A3EB45528C7D0AF00116470 /* HexagonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EB45428C7D0AF00116470 /* HexagonView.swift */; };
 		9A479ABE28915AAB00EA65AA /* DesignCodeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A479ABD28915AAB00EA65AA /* DesignCodeAppApp.swift */; };
 		9A479AC028915AAB00EA65AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A479ABF28915AAB00EA65AA /* ContentView.swift */; };
 		9A479AC228915AAB00EA65AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A479AC128915AAB00EA65AA /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		9A257B532897B59800E7C3E2 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		9A33172828CB857D0001A508 /* BlobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobView.swift; sourceTree = "<group>"; };
+		9A3EB45428C7D0AF00116470 /* HexagonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonView.swift; sourceTree = "<group>"; };
 		9A479ABA28915AAB00EA65AA /* DesignCodeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCodeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A479ABD28915AAB00EA65AA /* DesignCodeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCodeAppApp.swift; sourceTree = "<group>"; };
 		9A479ABF28915AAB00EA65AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 				9A479AC128915AAB00EA65AA /* Assets.xcassets */,
 				9A479AC328915AAB00EA65AA /* Preview Content */,
 				9A257B532897B59800E7C3E2 /* AccountView.swift */,
+				9A3EB45428C7D0AF00116470 /* HexagonView.swift */,
+				9A33172828CB857D0001A508 /* BlobView.swift */,
 			);
 			path = DesignCodeApp;
 			sourceTree = "<group>";
@@ -144,7 +150,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A257B542897B59800E7C3E2 /* AccountView.swift in Sources */,
+				9A3EB45528C7D0AF00116470 /* HexagonView.swift in Sources */,
 				9A479AC028915AAB00EA65AA /* ContentView.swift in Sources */,
+				9A33172928CB857D0001A508 /* BlobView.swift in Sources */,
 				9A8A14FD2895C69800DC1A1C /* Style.swift in Sources */,
 				9A479ABE28915AAB00EA65AA /* DesignCodeAppApp.swift in Sources */,
 			);
