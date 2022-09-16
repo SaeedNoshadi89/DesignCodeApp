@@ -13,6 +13,7 @@ struct TabBar: View {
     @State var tabItemWidth: CGFloat = 0
     
     var body: some View {
+        
         HStack{
             buttons
         }

@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A257A5F28D114CB00884AA2 /* PreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A257A5E28D114CB00884AA2 /* PreferenceKeys.swift */; };
+		9A257A6128D11BE700884AA2 /* AnimatableFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A257A6028D11BE700884AA2 /* AnimatableFontModifier.swift */; };
 		9A257B542897B59800E7C3E2 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A257B532897B59800E7C3E2 /* AccountView.swift */; };
+		9A27FB9D28CFA5DE008B36CD /* FeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A27FB9C28CFA5DE008B36CD /* FeaturedItem.swift */; };
+		9A27FB9F28CFA7AC008B36CD /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A27FB9E28CFA7AC008B36CD /* NavigationBar.swift */; };
 		9A33172928CB857D0001A508 /* BlobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A33172828CB857D0001A508 /* BlobView.swift */; };
 		9A3EB45528C7D0AF00116470 /* HexagonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EB45428C7D0AF00116470 /* HexagonView.swift */; };
 		9A479ABE28915AAB00EA65AA /* DesignCodeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A479ABD28915AAB00EA65AA /* DesignCodeAppApp.swift */; };
@@ -17,11 +21,16 @@
 		9A64FB7F28CE641600A42006 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64FB7E28CE641600A42006 /* TabBar.swift */; };
 		9A64FB8128CE726200A42006 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A64FB8028CE726200A42006 /* Tab.swift */; };
 		9A8A14FD2895C69800DC1A1C /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A14FC2895C69800DC1A1C /* Style.swift */; };
+		9AA50B3E28D3B0BC00B86E93 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA50B3D28D3B0BC00B86E93 /* Course.swift */; };
 		9AF7A5A528CF42CA0048B2F2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7A5A428CF42CA0048B2F2 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A257A5E28D114CB00884AA2 /* PreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKeys.swift; sourceTree = "<group>"; };
+		9A257A6028D11BE700884AA2 /* AnimatableFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableFontModifier.swift; sourceTree = "<group>"; };
 		9A257B532897B59800E7C3E2 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		9A27FB9C28CFA5DE008B36CD /* FeaturedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItem.swift; sourceTree = "<group>"; };
+		9A27FB9E28CFA7AC008B36CD /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		9A33172828CB857D0001A508 /* BlobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobView.swift; sourceTree = "<group>"; };
 		9A3EB45428C7D0AF00116470 /* HexagonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonView.swift; sourceTree = "<group>"; };
 		9A479ABA28915AAB00EA65AA /* DesignCodeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCodeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +41,7 @@
 		9A64FB7E28CE641600A42006 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		9A64FB8028CE726200A42006 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		9A8A14FC2895C69800DC1A1C /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		9AA50B3D28D3B0BC00B86E93 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		9AF7A5A428CF42CA0048B2F2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +100,7 @@
 			children = (
 				9A479ABF28915AAB00EA65AA /* ContentView.swift */,
 				9A64FB7E28CE641600A42006 /* TabBar.swift */,
+				9A27FB9E28CFA7AC008B36CD /* NavigationBar.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -108,6 +119,7 @@
 			children = (
 				9A33172828CB857D0001A508 /* BlobView.swift */,
 				9A3EB45428C7D0AF00116470 /* HexagonView.swift */,
+				9A27FB9C28CFA5DE008B36CD /* FeaturedItem.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -116,6 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				9A64FB8028CE726200A42006 /* Tab.swift */,
+				9A257A5E28D114CB00884AA2 /* PreferenceKeys.swift */,
+				9AA50B3D28D3B0BC00B86E93 /* Course.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				9A8A14FC2895C69800DC1A1C /* Style.swift */,
+				9A257A6028D11BE700884AA2 /* AnimatableFontModifier.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -203,10 +218,15 @@
 				9A3EB45528C7D0AF00116470 /* HexagonView.swift in Sources */,
 				9A479AC028915AAB00EA65AA /* ContentView.swift in Sources */,
 				9A64FB8128CE726200A42006 /* Tab.swift in Sources */,
+				9A27FB9F28CFA7AC008B36CD /* NavigationBar.swift in Sources */,
 				9A33172928CB857D0001A508 /* BlobView.swift in Sources */,
 				9A8A14FD2895C69800DC1A1C /* Style.swift in Sources */,
+				9AA50B3E28D3B0BC00B86E93 /* Course.swift in Sources */,
 				9A479ABE28915AAB00EA65AA /* DesignCodeAppApp.swift in Sources */,
+				9A27FB9D28CFA5DE008B36CD /* FeaturedItem.swift in Sources */,
+				9A257A5F28D114CB00884AA2 /* PreferenceKeys.swift in Sources */,
 				9A64FB7F28CE641600A42006 /* TabBar.swift in Sources */,
+				9A257A6128D11BE700884AA2 /* AnimatableFontModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
