@@ -9,7 +9,9 @@ import SwiftUI
 
 struct TabBar: View {
     @AppStorage ("selectedTab") var selectedTab: Tab = .home
-    @State var color: Color = .teal
+    @AppStorage ("selectedColor") var selectedColor: String = ""
+
+//    @State var color: Color = .teal
     @State var tabItemWidth: CGFloat = 0
     
     var body: some View {
@@ -37,7 +39,8 @@ struct TabBar: View {
             Button {
                 withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
                     selectedTab = item.tab
-                    color = item.color
+                    selectedColor = updateColorToString(color: item.color)
+//                    color = updateStringToColor(color: selectedColor)
                 }
             } label: {
                 VStack(spacing: 0) {
@@ -73,7 +76,7 @@ struct TabBar: View {
                 Spacer()
                 Spacer()
             }
-            Circle().fill(color).frame(width: tabItemWidth)
+            Circle().fill(updateStringToColor(color: selectedColor)).frame(width: tabItemWidth)
             if selectedTab == .home { Spacer() }
             if selectedTab == .explore {
                 Spacer()
@@ -93,7 +96,7 @@ struct TabBar: View {
                 Spacer()
             }
             Rectangle()
-                .fill(color)
+                .fill(updateStringToColor(color: selectedColor))
                 .frame(width: 28, height: 5)
                 .cornerRadius(3)
                 .frame(width: tabItemWidth)
