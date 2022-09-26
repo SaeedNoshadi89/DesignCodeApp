@@ -41,19 +41,22 @@ struct HomeView: View {
 //                        .padding(.horizontal, 30)
 //                    }
 //                }
-                if !model.showDetail{
-                    cards
-                }else{
-                    ForEach(courses) { course in
-                        Rectangle()
-                            .fill(.white)
-                            .frame(height: 350)
-                            .cornerRadius(30)
-                            .shadow(color: Color("Shadow"), radius: 20, x: 0, y: 10)
-                            .opacity(0.3)
-                        .padding(.horizontal, 30)
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 300), spacing: 20)], spacing: 20) {
+                    if !model.showDetail{
+                        cards
+                    }else{
+                        ForEach(courses) { course in
+                            Rectangle()
+                                .fill(.white)
+                                .frame(height: 350)
+                                .cornerRadius(30)
+                                .shadow(color: Color("Shadow"), radius: 20, x: 0, y: 10)
+                                .opacity(0.3)
+                            .padding(.horizontal, 30)
+                        }
                     }
                 }
+                .padding(.horizontal, 20)
             }
             .coordinateSpace(name: "scroll")
             .safeAreaInset(edge: .top, content: {
@@ -115,6 +118,8 @@ struct HomeView: View {
                             .offset(x: 32, y: -90)
                             .offset(x: minX / 2)
                         )
+                        .frame(maxWidth: 600)
+                        .frame(maxWidth: .infinity)
                     
                 }
             }
