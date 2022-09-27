@@ -25,10 +25,12 @@
 		9A8A14FD2895C69800DC1A1C /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A14FC2895C69800DC1A1C /* Style.swift */; };
 		9A8DF97C28D84EE20056B3E9 /* MatchedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8DF97B28D84EE20056B3E9 /* MatchedView.swift */; };
 		9AA50B3E28D3B0BC00B86E93 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA50B3D28D3B0BC00B86E93 /* Course.swift */; };
+		9AA933A528E21602001F1C48 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA933A428E21602001F1C48 /* SearchView.swift */; };
 		9AC442E828D9D5B20093D0CD /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC442E728D9D5B20093D0CD /* CourseItem.swift */; };
 		9AC442EA28D9D7AF0093D0CD /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC442E928D9D7AF0093D0CD /* CourseView.swift */; };
 		9AC442ED28D9DA130093D0CD /* ColorConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC442EC28D9DA130093D0CD /* ColorConverter.swift */; };
 		9AF7A5A528CF42CA0048B2F2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7A5A428CF42CA0048B2F2 /* HomeView.swift */; };
+		9AF83EFB28E2D8B7001494F6 /* Suggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF83EFA28E2D8B7001494F6 /* Suggestion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,10 +53,12 @@
 		9A8A14FC2895C69800DC1A1C /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		9A8DF97B28D84EE20056B3E9 /* MatchedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedView.swift; sourceTree = "<group>"; };
 		9AA50B3D28D3B0BC00B86E93 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		9AA933A428E21602001F1C48 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		9AC442E728D9D5B20093D0CD /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
 		9AC442E928D9D7AF0093D0CD /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		9AC442EC28D9DA130093D0CD /* ColorConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConverter.swift; sourceTree = "<group>"; };
 		9AF7A5A428CF42CA0048B2F2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		9AF83EFA28E2D8B7001494F6 /* Suggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 				9AF7A5A428CF42CA0048B2F2 /* HomeView.swift */,
 				9A8DF97B28D84EE20056B3E9 /* MatchedView.swift */,
 				9AC442E928D9D7AF0093D0CD /* CourseView.swift */,
+				9AA933A428E21602001F1C48 /* SearchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 				9A257A5E28D114CB00884AA2 /* PreferenceKeys.swift */,
 				9AA50B3D28D3B0BC00B86E93 /* Course.swift */,
 				9A72EDB828E0682D00C4C139 /* Model.swift */,
+				9AF83EFA28E2D8B7001494F6 /* Suggestion.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -240,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AF7A5A528CF42CA0048B2F2 /* HomeView.swift in Sources */,
+				9AF83EFB28E2D8B7001494F6 /* Suggestion.swift in Sources */,
 				9A257B542897B59800E7C3E2 /* AccountView.swift in Sources */,
 				9AC442EA28D9D7AF0093D0CD /* CourseView.swift in Sources */,
 				9A3EB45528C7D0AF00116470 /* HexagonView.swift in Sources */,
@@ -249,6 +256,7 @@
 				9A27FB9F28CFA7AC008B36CD /* NavigationBar.swift in Sources */,
 				9A33172928CB857D0001A508 /* BlobView.swift in Sources */,
 				9A8A14FD2895C69800DC1A1C /* Style.swift in Sources */,
+				9AA933A528E21602001F1C48 /* SearchView.swift in Sources */,
 				9AC442ED28D9DA130093D0CD /* ColorConverter.swift in Sources */,
 				9AA50B3E28D3B0BC00B86E93 /* Course.swift in Sources */,
 				9A479ABE28915AAB00EA65AA /* DesignCodeAppApp.swift in Sources */,

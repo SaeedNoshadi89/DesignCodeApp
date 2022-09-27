@@ -10,6 +10,7 @@ import SwiftUI
 struct AccountView: View {
     @State var isDeleted = false
     @State var isPinned = false
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         NavigationView {
@@ -25,6 +26,9 @@ struct AccountView: View {
             }
             .listStyle(.insetGrouped)
             .navigationTitle("Account")
+            .navigationBarItems(trailing: Button{dismiss()} label: {
+                Text("Done").bold()
+            })
         }
     }
     
