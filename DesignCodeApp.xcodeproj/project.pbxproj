@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A02D3F728E43CDF006BAAEE /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A02D3F628E43CDF006BAAEE /* SignUpView.swift */; };
 		9A257A5F28D114CB00884AA2 /* PreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A257A5E28D114CB00884AA2 /* PreferenceKeys.swift */; };
 		9A257A6128D11BE700884AA2 /* AnimatableFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A257A6028D11BE700884AA2 /* AnimatableFontModifier.swift */; };
 		9A257B542897B59800E7C3E2 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A257B532897B59800E7C3E2 /* AccountView.swift */; };
 		9A27FB9D28CFA5DE008B36CD /* FeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A27FB9C28CFA5DE008B36CD /* FeaturedItem.swift */; };
 		9A27FB9F28CFA7AC008B36CD /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A27FB9E28CFA7AC008B36CD /* NavigationBar.swift */; };
 		9A33172928CB857D0001A508 /* BlobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A33172828CB857D0001A508 /* BlobView.swift */; };
+		9A38FA8D28E45DAF00F955E1 /* AngularButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A38FA8C28E45DAF00F955E1 /* AngularButtonStyle.swift */; };
 		9A3EB45528C7D0AF00116470 /* HexagonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3EB45428C7D0AF00116470 /* HexagonView.swift */; };
 		9A479ABE28915AAB00EA65AA /* DesignCodeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A479ABD28915AAB00EA65AA /* DesignCodeAppApp.swift */; };
 		9A479AC028915AAB00EA65AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A479ABF28915AAB00EA65AA /* ContentView.swift */; };
@@ -34,12 +36,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A02D3F628E43CDF006BAAEE /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		9A257A5E28D114CB00884AA2 /* PreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKeys.swift; sourceTree = "<group>"; };
 		9A257A6028D11BE700884AA2 /* AnimatableFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableFontModifier.swift; sourceTree = "<group>"; };
 		9A257B532897B59800E7C3E2 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		9A27FB9C28CFA5DE008B36CD /* FeaturedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItem.swift; sourceTree = "<group>"; };
 		9A27FB9E28CFA7AC008B36CD /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		9A33172828CB857D0001A508 /* BlobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobView.swift; sourceTree = "<group>"; };
+		9A38FA8C28E45DAF00F955E1 /* AngularButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngularButtonStyle.swift; sourceTree = "<group>"; };
 		9A3EB45428C7D0AF00116470 /* HexagonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonView.swift; sourceTree = "<group>"; };
 		9A479ABA28915AAB00EA65AA /* DesignCodeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCodeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A479ABD28915AAB00EA65AA /* DesignCodeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCodeAppApp.swift; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 				9A8DF97B28D84EE20056B3E9 /* MatchedView.swift */,
 				9AC442E928D9D7AF0093D0CD /* CourseView.swift */,
 				9AA933A428E21602001F1C48 /* SearchView.swift */,
+				9A02D3F628E43CDF006BAAEE /* SignUpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 				9A8A14FC2895C69800DC1A1C /* Style.swift */,
 				9A257A6028D11BE700884AA2 /* AnimatableFontModifier.swift */,
 				9A83E49D28DE322000D43D32 /* Animations.swift */,
+				9A38FA8C28E45DAF00F955E1 /* AngularButtonStyle.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -250,6 +256,7 @@
 				9A257B542897B59800E7C3E2 /* AccountView.swift in Sources */,
 				9AC442EA28D9D7AF0093D0CD /* CourseView.swift in Sources */,
 				9A3EB45528C7D0AF00116470 /* HexagonView.swift in Sources */,
+				9A02D3F728E43CDF006BAAEE /* SignUpView.swift in Sources */,
 				9A479AC028915AAB00EA65AA /* ContentView.swift in Sources */,
 				9A8DF97C28D84EE20056B3E9 /* MatchedView.swift in Sources */,
 				9A64FB8128CE726200A42006 /* Tab.swift in Sources */,
@@ -262,6 +269,7 @@
 				9A479ABE28915AAB00EA65AA /* DesignCodeAppApp.swift in Sources */,
 				9A83E49E28DE322000D43D32 /* Animations.swift in Sources */,
 				9AC442E828D9D5B20093D0CD /* CourseItem.swift in Sources */,
+				9A38FA8D28E45DAF00F955E1 /* AngularButtonStyle.swift in Sources */,
 				9A72EDB928E0682D00C4C139 /* Model.swift in Sources */,
 				9A27FB9D28CFA5DE008B36CD /* FeaturedItem.swift in Sources */,
 				9A257A5F28D114CB00884AA2 /* PreferenceKeys.swift in Sources */,
