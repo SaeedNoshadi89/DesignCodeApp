@@ -12,7 +12,7 @@ struct NavigationBar: View {
     @Binding var hasScrolled: Bool
     @State var showSearch = false
     @State var showAccount = false
-
+    @AppStorage("showModal") var showSignUpModal = false
     
     var body: some View {
         ZStack {
@@ -30,21 +30,24 @@ struct NavigationBar: View {
             
             HStack(spacing: 16) {
                 Button{
-                  showSearch = true
+                    showSearch = true
                 } label: {
                     Image(systemName: "magnifyingglass")
                         .font(.body.weight(.bold))
                         .frame(width: 36, height: 36)
                         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
                         .foregroundColor(.secondary)
-                    .strokeStyle(cornerRadius: 14)
+                        .strokeStyle(cornerRadius: 14)
                 }
                 .sheet(isPresented: $showSearch) {
                     SearchView()
                 }
                 
                 Button{
-                    showAccount = true
+//                    showAccount = true
+                    withAnimation(.easeInOut) {
+                        showSignUpModal = true
+                    }
                 } label: {
                     Image("Avatar Default")
                         .resizable()
@@ -52,7 +55,7 @@ struct NavigationBar: View {
                         .cornerRadius(10)
                         .padding(8)
                         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
-                    .strokeStyle(cornerRadius: 18)
+                        .strokeStyle(cornerRadius: 18)
                 }
                 .sheet(isPresented: $showAccount) {
                     AccountView()
