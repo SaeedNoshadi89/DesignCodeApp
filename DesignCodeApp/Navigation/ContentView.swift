@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @AppStorage ("selectedTab") var selectedTab: Tab = .home
     @AppStorage ("selectedColor") var selectedColor: String = ""
-    @AppStorage("showModal") var showSignUpModal = false
+    @AppStorage("showModal") var showModal = false
     @EnvironmentObject var model: Model
     
     var body: some View {
@@ -34,38 +34,15 @@ struct ContentView: View {
             TabBar()
                 .offset(y: model.showDetail ? 200 : 0)
             
-            if showSignUpModal {
-                ZStack {
-                    Color.clear.background(.regularMaterial)
-                        .ignoresSafeArea()
-                    
-                    SignUpView()
-                    
-                    button
-                }
-                .transition(AnyTransition.opacity.animation(.easeInOut(duration: 0.2)))
-                .zIndex(1)
+            if showModal {
+                ModalView()
+                    .transition(AnyTransition.opacity.animation(.easeInOut(duration: 0.2)))
+                    .zIndex(1)
             }
         }
         .safeAreaInset(edge: .bottom) {
             Color.clear.frame(height: 44)
         }
-    }
-    
-    var button: some View{
-        Button {
-            withAnimation {
-                showSignUpModal = false
-            }
-        } label: {
-            Image(systemName: "xmark")
-                .font(.body.weight(.bold))
-                .foregroundColor(.secondary)
-                .padding(8)
-                .background(.ultraThinMaterial, in: Circle())
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
-        .padding(20)
     }
 }
 
