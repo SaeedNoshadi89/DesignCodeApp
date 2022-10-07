@@ -1,3 +1,3 @@
 # DesignCodeApp
 
-<img src="00.gif" width="300" height="500" />
+<img src="00.gif" width="250" height="500" />
