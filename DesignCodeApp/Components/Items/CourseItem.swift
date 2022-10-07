@@ -12,6 +12,7 @@ struct CourseItem: View {
     var course: Course = courses[0]
 //    @Binding var show: Bool
     @EnvironmentObject var model: Model
+    @Environment(\.sizeCategory) var sizeCategory
     
     var body: some View {
         VStack{
@@ -21,14 +22,18 @@ struct CourseItem: View {
                     .font(.largeTitle.weight(.bold))
                     .matchedGeometryEffect(id: "title\(course.id)", in: namespace)
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .dynamicTypeSize(.large)
                 
                 Text(course.subtitle.uppercased())
                     .font(.footnote.weight(.semibold))
                     .matchedGeometryEffect(id: "subtitle\(course.id)", in: namespace)
+                    .dynamicTypeSize(sizeCategory > .extraLarge ? .xLarge : .large)
                 
                 Text(course.text)
                     .font(.footnote)
                     .matchedGeometryEffect(id: "text\(course.id)", in: namespace)
+                    .dynamicTypeSize(sizeCategory > .extraLarge ? .xLarge : .large)
+                    .lineLimit(sizeCategory > .large ? 2 : 1)
             }
             .padding(20)
             .background(

@@ -13,6 +13,8 @@ struct ModalView: View {
     @State private var viewState: CGSize = .zero
     @State private var isDismissed = false
     @State private var appear = [false, false, false]
+    @AppStorage("isLogged") var isLogged = false
+
     
     var body: some View {
         ZStack {
@@ -45,6 +47,7 @@ struct ModalView: View {
                     .opacity(appear[2] ? 1 : 0)
                     .offset(y: appear[2] ? 0 : 10)
                     .blur(radius: appear[2] ? 0 : 40)
+                    .accessibilityHidden(true)
             )
             
             button
@@ -60,6 +63,12 @@ struct ModalView: View {
                 appear[2] = true
             }
         }
+        .onChange(of: isLogged){ newValue in
+            if newValue{
+                dismissModal()
+            }
+        }
+        .dynamicTypeSize(.large ... .accessibility1)
     }
     
     var drag: some Gesture{

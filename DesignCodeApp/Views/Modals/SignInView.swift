@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SignInView: View {
-    
     enum Field: Hashable{
         case email, password
     }
@@ -22,6 +21,7 @@ struct SignInView: View {
     @State private var circleColor: Color = .blue
     @State private var appear = [false, false, false]
     @EnvironmentObject var model: Model
+    @AppStorage("isLogged") var isLogged = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16){
@@ -59,7 +59,9 @@ struct SignInView: View {
                         passwordY = value
                     }
                 
-                Button {} label: {
+                Button {
+                    isLogged = true
+                } label: {
                     Text("Sign in")
                         .frame(maxWidth: .infinity)
                 }
@@ -74,6 +76,7 @@ struct SignInView: View {
                 
                 HStack{
                     Text("No account yet?")
+                    
                     Button{
                         model.selectedModal = .signUp
                     } label: {
