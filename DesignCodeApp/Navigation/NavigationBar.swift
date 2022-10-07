@@ -13,6 +13,7 @@ struct NavigationBar: View {
     @State var showSearch = false
     @State var showAccount = false
     @AppStorage("showModal") var showSignUpModal = false
+    @AppStorage("isLogged") var isLogged = false
     
     var body: some View {
         ZStack {
@@ -27,6 +28,7 @@ struct NavigationBar: View {
                 .padding(.leading, 20)
                 .padding(.top, 20)
                 .offset(y: hasScrolled ? -4 : 0)
+                .dynamicTypeSize(.large)
             
             HStack(spacing: 16) {
                 Button{
@@ -38,25 +40,26 @@ struct NavigationBar: View {
                         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
                         .foregroundColor(.secondary)
                         .strokeStyle(cornerRadius: 14)
+                        .dynamicTypeSize(.large)
                 }
                 .sheet(isPresented: $showSearch) {
                     SearchView()
                 }
                 
                 Button{
-//                    showAccount = true
-                    withAnimation(.easeInOut) {
-                        showSignUpModal = true
+                    if isLogged{
+                        showAccount = true
+                    }else{
+                        withAnimation(.easeInOut) {
+                            showSignUpModal = true
+                        }
                     }
                 } label: {
-                    Image("Avatar Default")
-                        .resizable()
-                        .frame(width: 26, height: 26)
-                        .cornerRadius(10)
-                        .padding(8)
-                        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
-                        .strokeStyle(cornerRadius: 18)
+                    AvatarView()
                 }
+                .accessibilityElement()
+                .accessibilityLabel("Account")
+                .accessibilityAddTraits(.isButton)
                 .sheet(isPresented: $showAccount) {
                     AccountView()
                 }

@@ -14,6 +14,7 @@ struct HomeView: View {
     @State var showStatusBar = true
     @State var selectedId = UUID()
     @EnvironmentObject var model: Model
+    @AppStorage("isLiteMode") var isLiteMode = true
     
     var body: some View {
         ZStack {
@@ -27,6 +28,7 @@ struct HomeView: View {
                     .foregroundColor(.secondary)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal, 20)
+                    .dynamicTypeSize(.large)
                 
 //                if !show{
 //                    cards
@@ -80,7 +82,6 @@ struct HomeView: View {
                 }
             }
         }
-        
     }
     
     var scrollDetection: some View{
@@ -109,7 +110,7 @@ struct HomeView: View {
                     FeaturedItem(course: course)
                         .padding(.vertical, 40)
                         .rotation3DEffect(.degrees( minX / -10), axis: (x: 0, y: 1, z: 0))
-                        .shadow(color: Color("Shadow").opacity(0.3), radius: 10, x: 0, y: 10)
+                        .shadow(color: Color("Shadow").opacity(isLiteMode ? 0 : 0.3), radius: 5, x: 0, y: 3)
                         .blur(radius: abs(minX / 40))
                         .overlay(Image(course.image)
                             .resizable()
@@ -120,6 +121,7 @@ struct HomeView: View {
                         )
                         .frame(maxWidth: 600)
                         .frame(maxWidth: .infinity)
+                        .accessibilityElement(children: .combine)
                     
                 }
             }
@@ -127,7 +129,9 @@ struct HomeView: View {
         .tabViewStyle(.page(indexDisplayMode: .never))
         .frame(height: 430)
         .background(Image("Blob 1")
-            .offset(x: 250, y: -100))
+            .offset(x: 250, y: -100)
+            .accessibilityHidden(true)
+        )
     }
     
     var cards: some View{
@@ -141,6 +145,8 @@ struct HomeView: View {
                         selectedId = course.id
                     }
                 }
+                .accessibilityElement(children: .combine)
+                .accessibilityAddTraits(.isButton)
         }
     }
     

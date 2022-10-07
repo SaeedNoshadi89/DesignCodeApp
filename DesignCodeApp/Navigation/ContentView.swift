@@ -21,13 +21,13 @@ struct ContentView: View {
                     HomeView()
                     
                 case .explore:
-                    AccountView()
+                    ExploreView()
                     
                 case .notifications:
-                    AccountView()
+                   NotificationsView()
                     
                 case .library:
-                    AccountView()
+                    LibraryView()
                     
             }
             
@@ -38,11 +38,13 @@ struct ContentView: View {
                 ModalView()
                     .transition(AnyTransition.opacity.animation(.easeInOut(duration: 0.2)))
                     .zIndex(1)
+                    .accessibilityAddTraits(.isModal)
             }
         }
         .safeAreaInset(edge: .bottom) {
-            Color.clear.frame(height: 44)
+            Color.clear.frame(height: 88)
         }
+        .dynamicTypeSize(.large ... .xxLarge)
     }
 }
 

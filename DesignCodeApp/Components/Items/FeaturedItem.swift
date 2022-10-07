@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FeaturedItem: View {
     var course: Course = courses[0]
+    @Environment(\.sizeCategory) var sizeCategory
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8.0) {
@@ -19,7 +20,7 @@ struct FeaturedItem: View {
                 .frame(width: 26.0, height: 26.0)
                 .cornerRadius(10)
                 .padding(9)
-                .background(.ultraThinMaterial, in:
+                .background(Color(UIColor.systemBackground).opacity(0.1), in:
                                 RoundedRectangle(cornerRadius: 16.0, style:
                                         .continuous)
                 )
@@ -29,6 +30,7 @@ struct FeaturedItem: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundStyle(.linearGradient(colors: [.primary, .primary.opacity(0.5)], startPoint: .topLeading, endPoint: .bottomTrailing))
+                .dynamicTypeSize(.large)
             
             Text(course.subtitle.uppercased())
                 .font(.footnote)
@@ -38,11 +40,9 @@ struct FeaturedItem: View {
             Text(course.text)
                 .font(.footnote)
                 .multilineTextAlignment(.leading)
-                .lineLimit(2)
+                .lineLimit(sizeCategory > .large ? 2 : 1)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .foregroundColor(.secondary)
-            
-            
         }
         .padding(.all, 20.0)
         .padding(.vertical, 20.0)
@@ -53,6 +53,7 @@ struct FeaturedItem: View {
         .strokeStyle()
         //        .overlay(RoundedRectangle(cornerRadius: 30.0, style: .continuous).stroke(.black, style: .init(lineWidth: 5.0, lineCap: .round, lineJoin: .round, miterLimit: .infinity, dash: [50.0, 10.0], dashPhase: 30.0)))
         .padding(.horizontal, 20.0)
+        .dynamicTypeSize(.large ... .xLarge)
         
     }
 }
